@@ -13,8 +13,8 @@ route.get("/",(req,res)=>{
 });
 
 route.post("/",(req,res)=>{
-    
-    res.send("Create a departments");
+    departmentController.createNewDepartment(req,res);
+    //res.send("Create a departments");
 });
 
 route.put("/:id",(req,res)=>{

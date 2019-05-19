@@ -22,6 +22,21 @@ class DepartmentController{
                 throw error;
             });
     }
+
+    createNewDepartment(req,res){
+        departmentModel.createDepartment(req.body.name)
+        .then(departments => {
+            res.status(200).send('Create Success');
+        })
+        .catch(error => {
+            throw error;
+        });
+    }
+
+    updateDepartment(req,res){
+        
+    }
+
 }
 
 

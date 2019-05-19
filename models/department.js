@@ -14,6 +14,20 @@ class DepartmentModel extends BaseModel{
             });
         })
     }
+
+    async createDepartment(name){
+        const createQuery = `Insert into departments set ?`;
+        return new Promise((resolve,reject)=>{
+            this.sql.query(createQuery,{name},(err,result) => {
+                if(err) reject(err);
+                else resolve(result);
+            })
+        })
+    }
+
+    async updateDepartment(id,name){
+        
+    }
 }
 
 
